@@ -64,7 +64,7 @@ class EventDashboard extends Component {
     handleChange = () => {
         this.setState(({isOpen}) => ({
             isOpen: !isOpen
-        }))
+        }));
     }
 
     handle
