@@ -4,7 +4,7 @@ import EventListAttendee from './EventListAttendee';
 
 class EventListItem extends Component {
     render() {
-        const {hostPhotoURL, date, venue, description, attendees} = this.props.event;
+        const {hostPhotoURL, date, venue, description, attendees, hostedBy} = this.props.event;
         return (
             <Segment.Group>
             <Segment>
@@ -14,7 +14,7 @@ class EventListItem extends Component {
                     <Item.Content>
                     <Item.Header as="a">Event Title</Item.Header>
                     <Item.Description>
-                        Hosted by <a>hosted by</a>
+                        Hosted by {hostedBy}
                     </Item.Description>
                     </Item.Content>
                 </Item>
