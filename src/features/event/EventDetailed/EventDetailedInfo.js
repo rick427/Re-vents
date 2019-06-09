@@ -14,6 +14,7 @@ const EventDetailedInfo = () => {
                   </Grid.Column>
                 </Grid>
               </Segment>
+
               <Segment attached>
                 <Grid verticalAlign="middle">
                   <Grid.Column width={1}>
@@ -24,6 +25,7 @@ const EventDetailedInfo = () => {
                   </Grid.Column>
                 </Grid>
               </Segment>
+
               <Segment attached>
                 <Grid verticalAlign="middle">
                   <Grid.Column width={1}>
@@ -37,6 +39,7 @@ const EventDetailedInfo = () => {
                   </Grid.Column>
                 </Grid>
               </Segment>
+              
             </Segment.Group>
     )
 }
