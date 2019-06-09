@@ -16,16 +16,6 @@ const actions = {
 
 
 class EventDashboard extends Component {
-    // state = {
-    //     isOpen: false,
-    //     selectedEvent: null
-    // }
-
-    // handleChange = () => {
-    //     this.setState(({isOpen}) => ({
-    //         isOpen: !isOpen
-    //     }));
-    // }
 
     handleCreateFormOpen = () => {
         this.setState({
@@ -34,22 +24,6 @@ class EventDashboard extends Component {
         })
     }
 
-    // handleFormCancel = () => {
-    //     this.setState({
-    //         isOpen: false
-    //     })
-    // }
-
-    //  handleCreate = (newEvent) => {
-    //    newEvent.id = cuid();
-    //    newEvent.hostPhotoURL = '/assets/user.png';
-    //    this.props.createEvent(newEvent);
-    // //    this.setState(({events}) => ({
-    // //        events: [...events, newEvent],
-    // //        isOpen: false
-    // //    }))
-    //  }
-
     handleSelectEvent = event => {
         this.setState({
             selectedEvent: event,
@@ -57,38 +31,18 @@ class EventDashboard extends Component {
         })
     }
 
-    // handleUpdateEvent = (updatedEvent) => {
-    //   this.props.updateEvent(updatedEvent)
-    //     this.setState(({events}) => ({
-    //         // events: events.map(event => {
-    //         //     if(event.id === updatedEvent.id){
-    //         //         return {...updatedEvent}
-    //         //     }
-    //         //     else{
-    //         //         return event
-    //         //     }
-    //         // }),
-    //         isOpen: false,
-    //         selectedEvent: null
-    //     }))
-    // }
-
     handleDeleteEvent = id => {
       this.props.deleteEvent(id)
-        // this.setState(({events}) => ({
-        //     events: events.filter(event => event.id !== id)
-        // }))
     }
 
 
     render() {
-        //const {isOpen, selectedEvent} = this.state;
+
         const {events} = this.props;
         return (
            <Grid>
                <Grid.Column width={10}>
                    <EventList 
-                       //selectEvent={this.handleSelectEvent} 
                        deleteEvent={this.handleDeleteEvent} 
                        events={events} 
                     />

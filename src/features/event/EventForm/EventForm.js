@@ -60,7 +60,6 @@ class EventForm extends Component {
     }
 
     render() {
-        //const {cancelForm} = this.props;
         const {title, date, city, venue, hostedBy} = this.state;
         return (
             <Segment>
