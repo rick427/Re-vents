@@ -9,7 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from './app/common/util/ScrollToTop';
 
 const store = configureStore();
-console.log(store.getState())
+//console.log(store.getState())
 
 ReactDOM.render(
   <Provider store={store}>
