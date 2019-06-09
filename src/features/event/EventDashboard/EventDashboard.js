@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Grid} from 'semantic-ui-react';
 import EventList from '../EventList/EventList';
-//import EventForm from '../EventForm/EventForm';
-import cuid from 'cuid';
 import {createEvent, updateEvent, deleteEvent} from '../eventActions';
 
 const maptState = (state) => ({
@@ -42,15 +40,15 @@ class EventDashboard extends Component {
     //     })
     // }
 
-     handleCreate = (newEvent) => {
-       newEvent.id = cuid();
-       newEvent.hostPhotoURL = '/assets/user.png';
-       this.props.createEvent(newEvent);
-    //    this.setState(({events}) => ({
-    //        events: [...events, newEvent],
-    //        isOpen: false
-    //    }))
-     }
+    //  handleCreate = (newEvent) => {
+    //    newEvent.id = cuid();
+    //    newEvent.hostPhotoURL = '/assets/user.png';
+    //    this.props.createEvent(newEvent);
+    // //    this.setState(({events}) => ({
+    // //        events: [...events, newEvent],
+    // //        isOpen: false
+    // //    }))
+    //  }
 
     handleSelectEvent = event => {
         this.setState({
@@ -59,21 +57,21 @@ class EventDashboard extends Component {
         })
     }
 
-    handleUpdateEvent = (updatedEvent) => {
-      this.props.updateEvent(updatedEvent)
-        this.setState(({events}) => ({
-            // events: events.map(event => {
-            //     if(event.id === updatedEvent.id){
-            //         return {...updatedEvent}
-            //     }
-            //     else{
-            //         return event
-            //     }
-            // }),
-            isOpen: false,
-            selectedEvent: null
-        }))
-    }
+    // handleUpdateEvent = (updatedEvent) => {
+    //   this.props.updateEvent(updatedEvent)
+    //     this.setState(({events}) => ({
+    //         // events: events.map(event => {
+    //         //     if(event.id === updatedEvent.id){
+    //         //         return {...updatedEvent}
+    //         //     }
+    //         //     else{
+    //         //         return event
+    //         //     }
+    //         // }),
+    //         isOpen: false,
+    //         selectedEvent: null
+    //     }))
+    // }
 
     handleDeleteEvent = id => {
       this.props.deleteEvent(id)
